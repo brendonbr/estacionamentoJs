@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <title>Document</title>
     <script src="script.js"></script>
 </head>
+
 <body>
-    
+
     <header>
-        <h1>Parquimetro</h1>
+        <h1>PARQUIMETRO</h1>
     </header>
 
     <main>
@@ -19,35 +21,45 @@
 
         <article>
 
-        
+            <section>
                 <p id="statusPagamento">SELECIONE O TEMPO E INSIRA O VALOR</p>
                 <p id="statusDuracao"></p>
-                
-            
-
-                <label>
-                    30 Minutos - R$1,00
-                    <input type="radio" name="opcaoTempo" value="30" id="tempo30">
-                </label>
-                <label>
-                    60 Minutos - R$1,75
-                    <input type="radio" name="opcaoTempo" value="60" id="tempo60">
-                </label>
-                <label>
-                    120 Minutos - R$3,00
-                    <input type="radio" name="opcaoTempo" value="120" id="tempo120">
-                </label>
+            </section>
 
 
-                <label>
-                    Valor a inserir
-                    <input type="number" name="" id="valorInserido">
-                </label>
+            <section>
+                <div>
+                    <label>
+                        30 Minutos - R$1,00
+                        <input type="radio" name="opcaoTempo" value="30" id="tempo30">
+                    </label>
+                    <label>
+                        60 Minutos - R$1,75
+                        <input type="radio" name="opcaoTempo" value="60" id="tempo60">
+                    </label>
+                    <label>
+                        120 Minutos - R$3,00
+                        <input type="radio" name="opcaoTempo" value="120" id="tempo120">
+                    </label>
+
+                </div>
+                <div>
+                    <label>
+                        Valor a inserir
+                        <input type="number" step="0.01"  id="valorInserido">
+                    </label>
+                </div>
+            </section>
 
 
-                <button onclick="estacionamento.reservarTempo()">
-                    Confirma
-                </button>
+
+
+
+
+
+            <button onclick="estacionamento.reservarTempo()">
+                Confirma
+            </button>
 
 
         </article>
@@ -56,4 +68,5 @@
 
 
 </body>
+
 </html>

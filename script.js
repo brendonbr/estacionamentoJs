@@ -25,9 +25,10 @@ class Parquimetro{
     receberTroco(valorInserido, duracao){
         let troco = valorInserido - duracao.valor ;
         const statusPagamento = getElement("statusPagamento");
-        console.log("troco R$ " + parseFloat(troco))
+ 
 
-        statusPagamento.textContent = `Obrigado pela compra, aqui esta os seus R$ ${troco} de troco`;
+        statusPagamento.textContent = `Obrigado pela compra, aqui esta os seus R$ ${(troco).toFixed(2)} de troco`;
+        statusPagamento.style.color = "#44FFD2";
     }
 
     checarValor(valor,duracao){
@@ -47,6 +48,7 @@ class Parquimetro{
                 }
                 else{
                     statusPagamento.textContent = "Saldo Insuficiente"
+                    statusPagamento.style.color = "red";
                 }
 
             }
@@ -57,6 +59,7 @@ class Parquimetro{
                 }
                 else{
                     statusPagamento.textContent = "Saldo Insuficiente"
+                    statusPagamento.style.color = "red";
                 }
             }
             else if(tempoReservado == 120){
@@ -66,6 +69,7 @@ class Parquimetro{
                 }
                 else{
                     statusPagamento.textContent = "Saldo Insuficiente"
+                    statusPagamento.style.color = "red";
                 }
             }
 
